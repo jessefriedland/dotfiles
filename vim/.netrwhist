@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/jessefriedland/IdeaProjects/podcast-dl/.git'
+let g:netrw_dirhist_2='/Users/jessefriedland/Developer/code-repos/jessefriedland/podcast-dl/.git'
+let g:netrw_dirhist_3='/Users/jessefriedland/Developer/code-repos/jessefriedland/podcast-dl/.git/hooks'
+let g:netrw_dirhist_4='/Users/jessefriedland/Developer/code-repos/jessefriedland/podcast-dl/.git'
+let g:netrw_dirhist_5='/System/Applications/Reminders.app/Contents/PlugIns'
+let g:netrw_dirhist_6='/Users/jessefriedland/Temp'
+let g:netrw_dirhist_7='/Users/jessefriedland/.dotfiles.local'
+let g:netrw_dirhist_8='/Users/jessefriedland/.github'

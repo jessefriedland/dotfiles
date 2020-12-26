@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/friedland/Developer/code-repos/github.mlbam.net/multimedia-development/Lumberjack/LumberJack/LumberJack.xcodeproj'
+let g:netrw_dirhist_2='/Users/friedland/Developer/code-repos/github.mlbam.net/multimedia-development/ams-ingest/ams-ingest-processor'
+let g:netrw_dirhist_3='/Applications/Reminders.app/Contents/PlugIns/com.apple.RemindersNC.appex'
+let g:netrw_dirhist_4='/Applications/Reminders.app/Contents/PlugIns/com.apple.RemindersNC.appex/Contents'
+let g:netrw_dirhist_5='/Applications/Reminders.app/Contents/PlugIns/com.apple.RemindersNC.appex/Contents/Resources'
+let g:netrw_dirhist_6='/Applications/Reminders.app/Contents/PlugIns/com.apple.RemindersNC.appex/Contents/Resources/en.lproj'
+let g:netrw_dirhist_7='/Users/friedland/.dotfiles.local'
+let g:netrw_dirhist_8='/Users/friedland/.dotfiles'
+let g:netrw_dirhist_9='/Users/friedland/Temp/test_media_ids_to_release.sh'

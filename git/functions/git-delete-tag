@@ -1,0 +1,15 @@
+#!/bin/bash
+
+usage() {
+  echo "Usage: git-delete-tag [tag name]" 
+}
+
+git-delete-tag() {
+  if [ -z "$1" ]; then
+      usage
+      return
+  fi
+
+  git tag -d $1
+  git push origin :refs/tags/$1
+}

@@ -1,0 +1,19 @@
+#!/bin/bash 
+
+killport() {
+  if [ -z $1 ]; then
+    echo "Usage: killport $(tput sgr 0 1)portnumber"
+    return 1;
+  fi
+
+  local process_id=$(lsof -i TCP:$1 -sTCP:LISTEN -t);
+  if [ -z $process_id ]; then
+    echo "no process with state LISTEN on port ${1}"
+    return 1;
+  fi
+  
+  local process_id_for_grep=$(printf "${process_id:0:${#process_id}-1}[${process_id:${#process_id}-1}]")
+  local process_name=$(ps -ef | grep $process_id_for_grep);
+  kill -9 $process_id;
+  echo "killed process[id=${process_id}] ${process_name}"
+}

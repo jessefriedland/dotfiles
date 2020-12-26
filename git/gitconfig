@@ -1,0 +1,3 @@
+[include]
+    path = .gitconfig.defaults
+    path = .gitconfig.local

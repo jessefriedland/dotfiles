@@ -1,0 +1,16 @@
+#!/bin/bash 
+
+showport() {
+  if [ -z $1 ]; then
+    echo "Usage: showport $(tput sgr 0 1)portnumber"
+    return 1;
+  fi
+
+  local process=$(lsof -i :$1);
+  if [ -z "$process" ]; then
+    echo "no process on port ${1}"
+    return 1;
+  fi
+
+  echo "$process"  
+}

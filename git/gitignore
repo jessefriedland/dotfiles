@@ -1,0 +1,66 @@
+# OS or Editor files
+._*
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+
+# Files that might appear on external disks
+.Spotlight-V100
+.Trashes
+
+# Always-ignore extensions
+*~
+*.diff
+*.err
+*.log
+*.orig
+*.pyc
+*.rej
+*.sass-cache
+*.sw?
+*.vi
+
+# Packages
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Compiled Source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# IDE Files
+nbproject
+.~lock.*
+.buildpath
+.classpath
+.project
+.settings
+composer.lock
+## intellij
+*.iml
+.idea
+## xcode
+xcuserdata/
+
+# Maven Files
+target/
+.war
+.ear
+overlays/
+
+# Git
+*.cert
+
+# Node
+node_modules/

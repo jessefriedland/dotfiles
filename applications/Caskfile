@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Install native apps
+
+brew install caskroom/cask/brew-cask
+brew tap caskroom/versions
+
+brew cask install google-chrome
+brew cask install disk-inventory-x
+brew cask install github
+brew cask install spectacle
+brew cask install flycut
+brew cask install mysqlworkbench
+brew cask install slack
+brew cask install charles
+
+for f in ~/.*; do
+  if [[ $f == */.Caskfile.*local ]]; then
+    printf "Updating local packages from ${f}...\n"
+    $f
+  fi
+done

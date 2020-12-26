@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for f in ~/.*; do
+  if [[ $f == */.Gemfile.*local ]]; then
+    printf "Updating local packages from ${f}...\n"
+    $f
+  fi                                                                                                                                                                                                         
+done

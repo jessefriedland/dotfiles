@@ -1,0 +1,15 @@
+#!/bin/bash 
+
+format-xml-files() {
+
+  local xmlFileCount=0;
+  for i in *; do
+    if [[ $i == *.xml ]]; then
+      xmllint $i --format > ${i}_temp;
+      mv ${i}_temp $i;
+      let xmlFileCount+=1;
+    fi
+  done
+
+  echo "formatted $xmlFileCount xml files in $PWD directory";
+}

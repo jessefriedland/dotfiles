@@ -1,0 +1,11 @@
+#!/bin/bash 
+
+killmatch() {
+  if [ -z $1 ]; then
+    echo "Usage: killmatch $(tput sgr 0 1)search_term"
+    return 1;
+  fi
+
+  local pid=$1; shift
+  findpid $pid | xargs kill "$@"
+}

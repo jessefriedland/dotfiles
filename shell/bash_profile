@@ -1,0 +1,46 @@
+#!/bin/bash
+
+# bash_profile
+
+# set 256 color profile where possible
+if [[ $COLORTERM == gnome-* && $TERM == xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
+  export TERM=gnome-256color
+elif infocmp xterm-256color >/dev/null 2>&1; then
+  export TERM=xterm-256color
+fi
+
+# Up-front dotfiles configuration
+# Not part of `load_dotfiles` because it must be sourced before anything else
+# to be sure that commands like `brew` (when installed in a custom location)
+# are already added to the PATH.
+[ -r $HOME/.dotfilesrc ] && source $HOME/.dotfilesrc;
+
+load_dotfiles() {
+  source $HOME/.dotfiles/lib/utils
+  declare -a _dotfiles=(
+    $HOME/.rvm/scripts/rvm # Load RVM into a shell session *as a function*
+    $HOME/.dotfiles/shell/bash_options # Options
+    $HOME/.dotfiles/shell/bash_exports # Exports
+    $HOME/.dotfiles/shell/bash_aliases # Aliases
+    $HOME/.dotfiles/*/functions/** # Functions
+    $HOME/.dotfiles/shell/bash_prompt # Custom bash prompt
+    $HOME/.dotfiles/shell/bash_paths # Path modifications
+    $HOME/.dotfiles/shell/misc_completion # Miscellaneous completion
+    $HOME/.bash_profile.*local # Local and private settings not under version control (e.g. git credentials)
+  )
+
+  if type_exists 'brew'; then
+    _dotfiles+=($(brew --prefix)/etc/bash_completion) # Bash completion (installed via Homebrew)                                                                                                                  
+  fi
+
+  # if these files are readable, source them
+  for index in ${!_dotfiles[*]}
+  do
+    if [[ -r ${_dotfiles[$index]} ]]; then
+      source ${_dotfiles[$index]}
+    fi
+  done
+}
+
+load_dotfiles
+unset load_dotfiles
