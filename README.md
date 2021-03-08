@@ -20,7 +20,7 @@ Dotfiles
 1) Execute the following command replacing $USERNAME with your github username to install and initalize all dotfiles components
 
 ```
-bash -c "$(curl -u $USERNAME -p -fsSL https://github.com/raw/jessefriedland/dotfiles/master/bin/dotfiles)"
+bash -c "$(curl -fsSL raw.github.com/jessefriedland/dotfiles/master/bin/dotfiles)"
 ```
 
 2) Profit.
