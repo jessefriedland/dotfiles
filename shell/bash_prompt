@@ -61,10 +61,6 @@ prompt_git() {
     fi
 }
 
-current_java_version() {
-  java -version 2>&1 | awk -F '"' '/version/ {print $2}'
-}
-
 set_prompts() {
     local black=""
     local blue=""
@@ -143,7 +139,6 @@ set_prompts() {
     PS1+="\[$reset$white\]@"
     PS1+="\[$hostStyle\]\h" # host
     PS1+="\[$reset$white\]|"
-    PS1+="java_\$(current_java_version \"$reset$blue\"):"
     PS1+="\[$green\]\w" # working directory
     PS1+="\$(prompt_git \"$white on $cyan\")" # git repository details
     PS1+="\n"
