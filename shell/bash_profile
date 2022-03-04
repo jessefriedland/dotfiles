@@ -33,6 +33,8 @@ load_dotfiles() {
     _dotfiles+=($(brew --prefix)/etc/bash_completion) # Bash completion (installed via Homebrew)                                                                                                                  
   fi
 
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+
   # if these files are readable, source them
   for index in ${!_dotfiles[*]}
   do

@@ -52,6 +52,8 @@ composer.lock
 .idea
 ## xcode
 xcuserdata/
+## vscode
+.vscode
 
 # Maven Files
 target/
@@ -64,3 +66,11 @@ overlays/
 
 # Node
 node_modules/
+.env
+
+# Hardhat
+cache
+artifacts
+
+#Next
+.next
